@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Uploader</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 1rem;
+            font-family: sans-serif;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../dist/css/flex-uploader.css">
+    
+</head>
+<body>
+    <p>Example:</p>
+    <label for="input-file" id="drop-area" class="drop-area">
+        <input type="file" name="image" id="input-file" accept="image/*" hidden>
+        <div id="img-view" class="img-view">
+            <img src="../dist/images/gallery-export.svg" id="img" width="50">
+            <p id="img-info">Chose Image To Upload</p>
+        </div>
+    </label>
+
+    <script src="../dist/js/flex-uploader.js"></script>
+
+    <script>
+        // init uploader
+        new FlexUploader("drop-area", "input-file", "img-view");
+    </script>
+</body>
+</html>
